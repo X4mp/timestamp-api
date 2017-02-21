@@ -40,7 +40,7 @@ var server = http.createServer(function(req, res) {
     console.log('path: ' + path)
     //if path is / serve html
     if(path == '/') {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.writeHead(200, {'Content-Type': 'text/html'});
         var fileStream = fs.createReadStream('index.html');
         fileStream.pipe(res);
     } else {
